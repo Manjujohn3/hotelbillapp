@@ -104,6 +104,15 @@ while(True):
         result = mycursor.fetchall()
         print(result)
 
+    elif(choice==9):
+        print("display the transaction summary for a period")
+        date1 = input("enter the date (yyyy-mm-d:")
+        date2 = input("enter the date (yyyy-mm-d:")
+        sql = "SELECT SUM(`amount`) FROM `bills` WHERE date BETWEEN '"+date1+"' AND '"+date2+"'"
+        mycursor.execute(sql)
+        result = mycursor.fetchall()
+        print(result)
+
     elif(choice==10):
       break
     
