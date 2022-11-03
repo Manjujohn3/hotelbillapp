@@ -13,7 +13,11 @@ while(True):
     print("4 pizza--50")
     print("5 shawarma--90")
     print("6 generate bill")
-    print("7 exit")
+    print("7 view all transaction")
+    print("8 view transaction in particular day")
+    print("9 view transaction summary for a period")
+    print("10 break")
+
 
     choice=int(input("enter the choice"))
 
@@ -84,7 +88,15 @@ while(True):
          mydb.commit()
          print('Thank you Welcome to next time ')
 
-
     elif(choice==7):
+        print("display the transactions")
+        date = input("enter the date (yyyy-mm-d:")
+        sql= "SELECT * FROM `bills` WHERE date ='"+date+"'"
+        mycursor.execute(sql)
+        result = mycursor.fetchall()
+        print(result)
+
+
+    elif(choice==10):
       break
     
