@@ -45,6 +45,12 @@ while(True):
 
     elif(choice==4):
         print("pizza selected")
+        quantity=(int(input("enter the quantity")))
+        total+=50*quantity
+        item.append("pizza x"+str(quantity))
+        #print("quantity= ",quantity)
+        #print("total" ,total) 
+
     elif(choice==5):
         print("shawarma selected")
     elif(choice==6):
