@@ -1,10 +1,16 @@
+import mysql.connector
+
+mydb= mysql.connector.connect(host = 'localhost' , user = 'root' , password = '' , database = 'hoteldb')
+mycursor = mydb.cursor() 
+total=0
+item=[]
 while(True):
     print("select an option:")
-    print("1 tea")
-    print("2 coffee")
-    print("3 burger")
-    print("4 pizza")
-    print("5 shawarma")
+    print("1 tea--10")
+    print("2 coffee--15")
+    print("3 burger--30")
+    print("4 pizza--50")
+    print("5 shawarma--90")
     print("6 generate bill")
     print("7 exit")
 
@@ -12,6 +18,13 @@ while(True):
 
     if(choice==1):
        print("tea selected")
+       quantity=(int(input("enter the quantity")))
+       total+=10*quantity
+       item.append("tea x"+str(quantity))
+       #print("quantity= ",quantity)
+       #print("total" ,total)
+       
+
     elif(choice==2):
         print("coffeee selected")
     elif(choice==3):
