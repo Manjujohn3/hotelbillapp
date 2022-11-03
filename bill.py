@@ -30,8 +30,8 @@ while(True):
         quantity=(int(input("enter the quantity")))
         total+=15*quantity
         item.append("coffee x"+str(quantity))
-        print("quantity= ",quantity)
-        print("total" ,total)
+        #print("quantity= ",quantity)
+        #print("total" ,total)
 
 
     elif(choice==3):
