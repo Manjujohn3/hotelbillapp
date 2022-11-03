@@ -53,6 +53,13 @@ while(True):
 
     elif(choice==5):
         print("shawarma selected")
+        quantity=(int(input("enter the quantity")))
+        total+=90*quantity
+        item.append("shawarma x"+str(quantity))
+        #print("quantity= ",quantity)
+        #print("total" ,total) 
+
+
     elif(choice==6):
         print("generate bill")
     elif(choice==7):
