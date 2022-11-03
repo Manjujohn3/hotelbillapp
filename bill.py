@@ -36,6 +36,13 @@ while(True):
 
     elif(choice==3):
         print("burger selected")
+        quantity=(int(input("enter the quantity")))
+        total+=30*quantity
+        item.append("burger x"+str(quantity))
+        #print("quantity= ",quantity)
+        #print("total" ,total)
+
+
     elif(choice==4):
         print("pizza selected")
     elif(choice==5):
