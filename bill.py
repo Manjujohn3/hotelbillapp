@@ -96,6 +96,13 @@ while(True):
         result = mycursor.fetchall()
         print(result)
 
+    elif(choice==8):
+        print("display the transaction summary of a date")
+        date = input("enter the date (yyyy-mm-d:")
+        sql = "SELECT SUM(`amount`), `date` FROM `bills` WHERE date = '"+date+"'"
+        mycursor.execute(sql)
+        result = mycursor.fetchall()
+        print(result)
 
     elif(choice==10):
       break
